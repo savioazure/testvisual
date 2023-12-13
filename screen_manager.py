@@ -10,7 +10,7 @@ class ScreenManager:
 
     @staticmethod
     def is_app_focused(app_title_name: str):
-        active_window_title = win32gui.GetWindownText(win32gui.GetForegroundWindow()).lower()
+        active_window_title = win32gui.GetWindowText(win32gui.GetForegroundWindow()).lower()
         return app_title_name in active_window_title
 
     @staticmethod

@@ -2,9 +2,10 @@ from screen_manager import ScreenManager
 
 def run():
     while True:
-        coordinates = ScreenManager.get_all_matches_by_image(image_to_search="./Screenshot_2023-12-12_03_05_48.png")
-        for coordinate in coordinates:
-            print(coordinate)
+        if ScreenManager.is_app_focused(app_title_name="linkedin"):
+            coordinates = ScreenManager.search_image_on_screen(image_to_search="./testingcut.png")
+            for coordinate in coordinates:
+                print(coordinate)
 
             
 run()
