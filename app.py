@@ -16,6 +16,7 @@ def run():
             
             for coordinate in coordinates:
 #                print(coordinate)
+                total_follows_count = total_follows_count + 1
                 ScreenManager.click_on_screen(coordinate_to_click=coordinate)
                 keyboard.press_and_release('TAB, TAB, TAB, Enter')
 
