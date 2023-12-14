@@ -7,6 +7,9 @@ from screen_manager import ScreenManager
 
 
 def run():
+    
+    total_follows_count = 0
+    
     while True:
         if ScreenManager.is_app_focused(app_title_name="linkedin"):
             coordinates = ScreenManager.search_image_on_screen(image_to_search="./testingcut3.png")
@@ -22,7 +25,7 @@ def run():
                 
             ScreenManager.scroll_on_screen(value_to_scroll=-400)
             time.sleep(random.randint(1, 2))
-    
+            print(f"Total de unfollows hasta el momento {str(total_follows_count)}" )
             if keyboard.is_pressed("ESC"):
                 print("saliendo del programa Lnkbot")
                 break
